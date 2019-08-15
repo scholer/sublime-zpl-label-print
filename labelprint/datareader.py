@@ -27,11 +27,11 @@ def data_from_csv_content(content, fieldnames=None, sep=None, eol_char=None):
     if isinstance(fieldnames, str):
         fieldnames = fieldnames.split(sep)
 
-    if eol_char == "win":
+    if "win" in eol_char.lower():
         eol_char = "\r\n"
-    elif eol_char == "unix":
+    elif "unix" in eol_char.lower():
         eol_char = "\n"
-    elif eol_char == "auto-detect":
+    elif "auto" in eol_char.lower():  # == "auto-detect":
         eol_char = "\r\n" if "\r\n" in content else "\n"
 
     if eol_char:

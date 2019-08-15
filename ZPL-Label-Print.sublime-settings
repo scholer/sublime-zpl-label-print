@@ -1,0 +1,25 @@
+// ZPL-Label-Print default settings:
+// Copy items from here to your user-customized ZPL-Label-Print "Settings - User" file.
+{
+    // REQUIRED: You MUST populate the following setting options to use ZPL-Label-Print:
+    // OBS: Please note that `\` is used as an ESCAPE character. 
+    // To write a single backslash, you must type TWO backslashes.
+    // To write `\\localhost\printer_name`, you must type ``\\\\localhost\\printer_name`
+    "printer": "",  // Fully-qualified printer name, e.g. `\\\\localhost\\usb001_generic_text_printer`
+    "label_template_file": "",  // Path to your label template file.
+    "printerconfig_zpl_file": "",  // Path to your printer_config.zpl file.
+
+    // The following fields are optional:
+    "fieldnames": ["datestr", "sampleid", "sampledesc"],
+    "sep": "\t",
+    "strip_whitespace": false,
+    "data_forbidden_chars": "^~\\[]",
+
+    "save_to_file": null,
+    "do_print": false,
+    "print_method": null,
+    "verbose": 1,
+
+    "ensure_ascii": false,
+
+}

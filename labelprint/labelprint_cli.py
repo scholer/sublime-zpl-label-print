@@ -87,8 +87,8 @@ from pprint import pformat
 
 from .zpl import generate_zpl, check_forbidden_characters_in_data, DEFAULT_ZPL_PRINTER_CONFIG
 from .windows_printing import print_content
-from .datareader import data_from_args, data_from_csv_file, \
-    data_from_csv_content, get_formulas, eval_formulas
+from .datareader import data_from_args, data_from_csv_file, data_from_csv_content
+from .datareader import get_formulas, eval_formulas
 
 
 def print_zpl_labels(

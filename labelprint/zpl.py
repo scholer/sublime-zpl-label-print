@@ -126,9 +126,10 @@ DEFAULT_ZPL_LABEL_TEMPLATE = """
 """
 
 DEFAULT_VALUES = {}
+FORBIDDEN_CHARS = "^~\\[]"
 
 
-def check_forbidden_characters_in_data(data, forbidden_chars="^~\\[]", do_raise=True):
+def check_forbidden_characters_in_data(data, forbidden_chars=FORBIDDEN_CHARS, do_raise=True):
     for i, row in enumerate(data):
         for key, value in row.items():
             # Checking the string representation, as it will probably appear in the zpl after .format()

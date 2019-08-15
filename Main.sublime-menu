@@ -1,0 +1,74 @@
+[
+    {
+        "id": "preferences",
+        "children":
+        [
+            {
+                "caption": "Package Settings",
+                "mnemonic": "P",
+                "id": "package-settings",
+                "children":
+                [
+                    {
+                        "caption": "ZPL-Label-Print",
+                        "children":
+                        [
+                            {
+                                "command": "open_file",
+                                "args": {"file": "${packages}/ZPL-Label-Print/README.md"},
+                                "caption": "README"
+                            },
+                            { "caption": "-" },
+                            {
+                                "command": "edit_settings", "args":
+                                {
+                                    "base_file": "${packages}/ZPL-Label-Print/ZPL-Label-Print.sublime-settings",
+                                    "default": "// Settings in here override the default settings in \"ZPL-Label-Print/ZPL-Label-Print.sublime-settings\",\n// and are overridden in turn by syntax-specific settings.\n{\n\t$0\n}\n"
+                                },
+                                "caption": "ZPL-Label-Print Settings",
+                            },
+                            // {
+                            //     "command": "open_file",
+                            //     "args": {"file": "${packages}/ZPL-Label-Print/ZPL-Label-Print.sublime-settings"},
+                            //     "caption": "Settings – Default",
+                            // },
+                            // {
+                            //     "command": "open_file",
+                            //     "args": {"file": "${packages}/User/ZPL-Label-Print.sublime-settings"},
+                            //     "caption": "Settings – User",
+                            // },
+                            { "caption": "-" },
+                            {
+                                "command": "open_file",
+                                "args": {"file": "${packages}/ZPL-Label-Print/Default ($platform).sublime-keymap"},
+                                "caption": "Key Bindings – Default",
+                            },
+                            {
+                                "command": "open_file",
+                                "args": {"file": "${packages}/User/Default ($platform).sublime-keymap"},
+                                "caption": "Key Bindings – User",
+                            },
+                            { "caption": "-" },
+                            { 
+                                "caption": "Browse ZPL Example Files…", 
+                                "command": "open_dir", 
+                                "args": {"dir": "${packages}/ZPL-Label-Print/example_files"}, 
+                                "mnemonic": "B" 
+                            },
+                            {
+                                "caption": "Open printer_config.zpl example file",
+                                "command": "open_file",
+                                "args": {"file": "${packages}/ZPL-Label-Print/example_files/printer_config.zpl"},
+                            },
+                            {
+                                "caption": "Open label_template.zpl example file",
+                                "command": "open_file",
+                                "args": {"file": "${packages}/ZPL-Label-Print/example_files/label_template.zpl"},
+                            },
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
