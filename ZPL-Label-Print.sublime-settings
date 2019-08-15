@@ -16,10 +16,8 @@
     "data_forbidden_chars": "^~\\[]",
 
     "save_to_file": null,
-    "do_print": false,
+    "do_print": true,
     "print_method": null,
     "verbose": 1,
-
-    "ensure_ascii": false,
 
 }

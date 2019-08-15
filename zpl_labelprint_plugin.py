@@ -121,6 +121,7 @@ class PrintZplLabelsFromCsvContentCommand(sublime_plugin.TextCommand):
             print_method = s.get("print_method")
         if verbose is None:
             verbose = s.get("verbose", 1)
+        print("verbose:", verbose)
 
         if source == "selection":
             text_content = get_merged_selection(self.view, sep="\n")
@@ -181,7 +182,7 @@ class PrintZplLabelsFromCsvContentCommand(sublime_plugin.TextCommand):
             if not printer:
                 raise ValueError("`printer` MUST be specified in order to print, "
                                  "either in plugin settings or as function parameter.")
-            # print_content(zpl_content, printer=printer, method=print_method, verbose=verbose)
+            print_content(zpl_content, printer=printer, method=print_method, verbose=verbose)
 
         return zpl_content
 
