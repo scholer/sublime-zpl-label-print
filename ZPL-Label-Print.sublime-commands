@@ -11,6 +11,11 @@
         "args": {"source": "selection", "sep": "\t"}
      },
     {
+        "caption": "Print ZPL label(s) using SELECTED values (custom field separator; no header; use header defined in settings).", 
+        "command": "print_zpl_labels_from_csv_content", 
+        "args": {"source": "selection", "sep": null}
+     },
+    {
         "caption": "Print ZPL label(s) using ALL COMMA-separated values in current file/buffer (no header; use header defined in settings).", 
         "command": "print_zpl_labels_from_csv_content", 
         "args": {"source": "current_view_buffer", "sep": ","}
@@ -21,6 +26,11 @@
         "args": {"source": "current_view_buffer", "sep": "\t"}
      },
     {
+        "caption": "Print ZPL label(s) using values in curent file/buffer (custom field separator; no header; use header defined in settings).", 
+        "command": "print_zpl_labels_from_csv_content", 
+        "args": {"source": "selection", "sep": null}
+     },
+    {
         "caption": "Print ZPL label(s) using COMMA-separated values from CLIPBOARD (no header; use header defined in settings).", 
         "command": "print_zpl_labels_from_csv_content", 
         "args": {"source": "clipboard", "sep": ","}
@@ -29,5 +39,57 @@
         "caption": "Print ZPL label(s) using TAB-separated values from CLIPBOARD (no header; use header defined in settings).", 
         "command": "print_zpl_labels_from_csv_content", 
         "args": {"source": "clipboard", "sep": "\t"}
+     },
+    {
+        "caption": "Print ZPL label(s) using values from clipboard (custom field separator; no header; use header defined in settings).", 
+        "command": "print_zpl_labels_from_csv_content", 
+        "args": {"source": "selection", "sep": null}
+     },
+
+    // First-line-is-header:
+    {
+        "caption": "Print ZPL label(s) using SELECTED COMMA-separated values (first line is header with fieldnames).", 
+        "command": "print_zpl_labels_from_csv_content", 
+        "args": {"source": "selection", "sep": ","}
+     },
+    {
+        "caption": "Print ZPL label(s) using SELECTED TAB-separated values (first line is header with fieldnames).", 
+        "command": "print_zpl_labels_from_csv_content", 
+        "args": {"source": "selection", "sep": "\t"}
+     },
+    {
+        "caption": "Print ZPL label(s) using SELECTED values (custom field separator; first line is header with fieldnames).", 
+        "command": "print_zpl_labels_from_csv_content", 
+        "args": {"source": "selection", "sep": null}
+     },
+    {
+        "caption": "Print ZPL label(s) using ALL COMMA,-separated values in current file/buffer (first line is header with fieldnames).", 
+        "command": "print_zpl_labels_from_csv_content", 
+        "args": {"source": "current_view_buffer", "sep": ","}
+     },
+    {
+        "caption": "Print ZPL label(s) from ALL TAB-separated values in current file/buffer (first line is header with fieldnames).", 
+        "command": "print_zpl_labels_from_csv_content", 
+        "args": {"source": "current_view_buffer", "sep": "\t"}
+     },
+    {
+        "caption": "Print ZPL label(s) using values in curent file/buffer (custom field separator; first line is header with fieldnames).", 
+        "command": "print_zpl_labels_from_csv_content", 
+        "args": {"source": "selection", "sep": null}
+     },
+    {
+        "caption": "Print ZPL label(s) using COMMA,-separated values from CLIPBOARD (first line is header with fieldnames).", 
+        "command": "print_zpl_labels_from_csv_content", 
+        "args": {"source": "clipboard", "sep": ","}
+     },
+    {
+        "caption": "Print ZPL label(s) using TAB-separated values from CLIPBOARD (first line is header with fieldnames).", 
+        "command": "print_zpl_labels_from_csv_content", 
+        "args": {"source": "clipboard", "sep": "\t"}
+     },
+    {
+        "caption": "Print ZPL label(s) using values from clipboard (custom field separator; first line is header with fieldnames).", 
+        "command": "print_zpl_labels_from_csv_content", 
+        "args": {"source": "selection", "sep": null}
      },
 ]

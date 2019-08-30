@@ -2,6 +2,8 @@
 
 """
 
+TODO: Consider using the built-in Sublime Text ExecCommand for printing.
+
 
 How to print:
 --------------
@@ -29,7 +31,7 @@ To capture/redirect all printed output to file:
 
 
 
-### Prior art related to printing:
+### Prior art, packages related to Sublime Text printing:
 
 * SublimePrint,
     * https://github.com/svenax/SublimePrint
