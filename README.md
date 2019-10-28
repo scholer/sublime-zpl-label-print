@@ -10,6 +10,52 @@ by filling a template with selected data values.
 
 
 
+
+
+## Overview:
+
+
+### How it works:
+
+1. You have a label template with variable fields.
+2. You select some tabulated text containing variable values.
+3. Each row is used to generate one label (ZPL format).
+4. The labels are sent to the label printer together with the printer config (just static ZPL).
+
+
+### Example:
+
+* The default fields are "datestr", "sampleid", and "sampledesc".
+* Select the following text:
+
+```
+datestr	sampleid	sampledesc
+20191028	RS573a1	RRO core1 200uM/48
+20191028	RS573a2	RRO core2 200uM/48
+```
+
+* Press `Ctrl+Shift+P` and select ""Print ZPL label(s) using SELECTED TAB-separated values (first line is header with fieldnames)."
+
+
+
+
+### Installation and configuration overview:
+
+1. Install this package/plugin.
+2. Make sure your label printer is ready.
+3. Configure plugin settings:
+	* Specify `label_template_file` zpl file.
+	* Specify `printerconfig_zpl_file` - a zpl file used to configure the ZPL label printer for each print job.
+	* Specify the label printer name (`printer`), e.g. `\\localhost\usb001_generic_text_printer`.
+4. Customize your label template and printerconfig ZPL files. 
+	* You can use the files in the `examples` folder as a starting point. 
+	  These files were created for printing on 
+	  LabTags Cryogenic Barcode Labels (1.25" X 0.625" + 0.4375" #JTTA-172) labels using a 
+	  Zebra ZD420 thermal transfer label printer.
+	  The default fields are "datestr", "sampleid", and "sampledesc",
+	  which is used to print a single barcode on the tube lid label, and three text boxes on the tube-side label.
+
+
 ## Installation:
 
 OBS: Zpl-Label-Print is not 
@@ -79,6 +125,7 @@ The name should not contain any spaces or special characters.
 The printer name should look something like this:
 
 	\\localhost\usb001_generic_text_printer
+
 
 
 ## Configuring plugin settings:
@@ -185,5 +232,45 @@ You can refer to the ZPL reference book to see what each command does.
 
 You can use [Labelary Viewer](http://labelary.com/viewer.html) to see how the label printed 
 by a given set of ZPL commands will appear. Use this to play around with the different ZPL commands.
+
+
+
+
+
+## Appendix II: Changing default label font
+
+The default Zebra font (`ZPL-0`) is not super pretty.
+The hyphens in particular have too much white-space around them, making them appear more like en- or em-dashes.
+However, right now, the Zebra-0 font appears to be the only scalable font?
+
+
+To change the default font, refer to the link below.
+You can use the `^FL` and `^CW` commands to change the font on a label-by-label basis.
+
+You can use ZebraDesigner to find fonts already on your printer (marked with the printer symbol).
+
+You can use Zebra Setup Utilities to transfer fonts from your pc to your label printer.
+
+
+Refs:
+
+* https://www.zebra.com/us/en/support-downloads/knowledge-articles/ait/downloading-and-using-fonts-on-zebra-zpl-printers.html
+* https://www.zebra.com/us/en/support-downloads/knowledge-articles/zebra-setup-utilities--downloading-fonts-to-a-printer.html
+* https://www.zebra.com/us/en/support-downloads/knowledge-articles/printing-multiple-fonts-using-zpl-fl.html
+* https://www.zebra.com/content/dam/zebra/manuals/printers/common/programming/zpl-zbi2-pm-en.pdf
+* https://minisoft.com/support/index.php/zebra-font-support/
+	* The "TPCL-A" and "TPCL-B" fonts in this ref look nicer than the standard Zebra "ZPL-0" font (particularly the hyphen).
+
+
+
+## Appendix III: Reading barcodes
+
+
+The following apps can be used to read datamatrix barcodes:
+
+* "Cognex barcode reader"
+* "ZXing Barcode scanner" 
+* "Barcode Scanner X" from DynamSoft.
+
 
 

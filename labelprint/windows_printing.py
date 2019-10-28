@@ -313,12 +313,19 @@ def print_raw_win32print(content, printer_name, job_description):
 #     # I think this still just uses win32print to actually print the document.
 
 
-def execute_and_process(cmd_args, verbose=1):
+def execute_and_process(cmd_args, capture_output=True, check=True, verbose=1):
     """ Execute shell command and process (utility function).
 
     Args:
         cmd_args:
+        capture_output: Capture the output of the executed command. 
+            This is just passed to subprocess.run() 
+        check: If True, check the returncode and raise error if non-zero.
         verbose: If True, print the command that is being executed before running it.
+
+    OBS: Since Sublime Text uses Python 3.3 which doesn't support subprocess.run(),
+    the `capture_output` and `check` arguments are not used.
+    See git commit a56011fb5 to see how these arguments were meant to be used.
 
     Returns:
         The output (stdout and stderr) from the executed process.
