@@ -34,7 +34,7 @@ datestr	sampleid	sampledesc
 20191028	RS573a2	RRO core2 200uM/48
 ```
 
-* Press `Ctrl+Shift+P` and select ""Print ZPL label(s) using SELECTED TAB-separated values (first line is header with fieldnames)."
+* Press `Ctrl+Shift+P` and select "Print ZPL label(s) using SELECTED TAB-separated values (first line is header with fieldnames)."
 
 
 
